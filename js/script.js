@@ -24,4 +24,15 @@ window.addEventListener("DOMContentLoaded", () => {
 		getOutboundLink("https://poshmark.com/closet/toastymallows");
 		return false;
 	};
+
+	let emailLinks = document.getElementsByClassName("email-link");
+
+	for (let i = 0; i < emailLinks.length; i++) {
+		const emailLink = emailLinks[i];
+
+		emailLink.onclick = () => {
+			getOutboundLink("mailto:hello@estatesaleclothes.com?subject=Hello!");
+			return false;
+		};
+	}
 });
