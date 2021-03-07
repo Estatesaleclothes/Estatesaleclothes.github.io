@@ -49,26 +49,15 @@
 </head>
 
 <body>
-	<div class="body-wrapper">
-		<div class="avatar-wrapper">
+	<div class="body-wrapper" role="main">
+		<div class="avatar-wrapper" role="banner">
 			<h2>Estate Sale Clothes</h2>
 			<img class="avatar" src="./img/avatar.jpg" />
 			<p>80s, 90s & 00s Unisex Clothing</p>
 			<div class="email-wrapper">
-				<a href="mailto:hello@estatesaleclothes.com?subject=Hello!" class="email-link">
-					<span class="email-icon" alt="Email Icon">📧 </span>
-					<span class="email">
-						hello@estatesaleclothes.com
-					</span>
-				</a>
-			</div>
-		</div>
-		<div class="avatar-wrapper-landscape">
-			<div class="text-wrapper">
-				<h2>Estate Sale Clothes</h2>
-				<p>80s, 90s & 00s Unisex Clothing</p>
-				<div class="email-wrapper">
-					<a href="mailto:hello@estatesaleclothes.com?subject=Hello!" class="email-link">
+				<div class="link">
+					<a href="mailto:hello@estatesaleclothes.com?subject=Hello!" role="link" tabindex="1"
+						class="email-link">
 						<span class="email-icon" alt="Email Icon">📧 </span>
 						<span class="email">
 							hello@estatesaleclothes.com
@@ -76,18 +65,35 @@
 					</a>
 				</div>
 			</div>
+		</div>
+		<div class="avatar-wrapper-landscape" role="banner">
+			<div class="text-wrapper">
+				<h2>Estate Sale Clothes</h2>
+				<p>80s, 90s & 00s Unisex Clothing</p>
+				<div class="email-wrapper">
+					<div class="link">
+						<a href="mailto:hello@estatesaleclothes.com?subject=Hello!" role="link" tabindex="1"
+							class="email-link">
+							<span class="email-icon" alt="Email Icon">📧 </span>
+							<span class="email">
+								hello@estatesaleclothes.com
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
 			<div>
-				<img class="avatar" src="./img/avatar.jpg" />
+				<img class="avatar" src="./img/avatar.jpg" role="img" alt="Estate Sale Clothes logo" />
 			</div>
 		</div>
-		<div class="links-wrapper">
+		<div class="links-wrapper" role="navigation" aria-label="Links to external Estate Sale Clothes websites">
 			<ul class="links">
 				<li class="header">
 					Clothing <span>(Depop, Poshmark)</span>
 				</li>
 				<li>
 					<div class="link">
-						<a href="https://www.depop.com/toastymallows/" id="depopLink" tabindex="1" role="navigation">
+						<a href="https://www.depop.com/toastymallows/" id="depopLink" tabindex="2" role="link">
 							<img src="./img/depop.png" alt="Depop Icon" />
 							@toastymallows
 						</a>
@@ -95,10 +101,31 @@
 				</li>
 				<li>
 					<div class="link">
-						<a href="https://poshmark.com/closet/toastymallows" id="poshmarkLink" tabindex="2"
-							role="navigation">
+						<a href="https://poshmark.com/closet/toastymallows" id="poshmarkLink" tabindex="3" role="link">
 							<img src="./img/poshmark.png" alt="Poshmark Icon" />
 							@toastymallows
+						</a>
+					</div>
+				</li>
+			</ul>
+			<ul class="links">
+				<li class="header">
+					Records <span>(Discogs)</span>
+				</li>
+				<li>
+					<div class="link">
+						<a href="https://www.discogs.com/seller/toastymallows/profile" id="discogsLink" tabindex="4"
+							role="link">
+							<img src="./img/discogs.png" alt="Discogs Icon" />
+							@toastymallows
+						</a>
+					</div>
+				</li>
+				<li>
+					<div id="recordsSpacer" class="link">
+						<a>
+							<img src="./img/discogs.png" />
+							spacer
 						</a>
 					</div>
 				</li>
@@ -109,8 +136,8 @@
 				</li>
 				<li>
 					<div class="link">
-						<a href="https://www.instagram.com/estatesaleclothes/" id="instagramLink" tabindex="3"
-							role="navigation">
+						<a href="https://www.instagram.com/estatesaleclothes/" id="instagramLink" tabindex="5"
+							role="link">
 							<img src="./img/instagram.png" alt="Instagram Icon" />
 							@estatesaleclothes
 						</a>
@@ -118,8 +145,8 @@
 				</li>
 				<li>
 					<div class="link">
-						<a href="https://www.facebook.com/estatesaleclothes/" id="facebookLink" tabindex="4"
-							role="navigation">
+						<a href="https://www.facebook.com/estatesaleclothes/" id="facebookLink" tabindex="6"
+							role="link">
 							<img src="./img/l1.png" alt="Facebook Icon" />
 							@estatesaleclothes
 						</a>

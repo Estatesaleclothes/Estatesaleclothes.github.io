@@ -33,6 +33,13 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 	};
 
+	document.getElementById("discogsLink").onclick = () => {
+		if (!window.google_error) {
+			getOutboundLink("https://www.discogs.com/seller/toastymallows/profile");
+			return false;
+		}
+	}
+
 	let emailLinks = document.getElementsByClassName("email-link");
 
 	for (let i = 0; i < emailLinks.length; i++) {

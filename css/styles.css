@@ -10,7 +10,7 @@ body {
 	margin: 0;
 	width: 100%;
 	position: absolute;
-	top: 3vh;
+	top: 0;
 	bottom: 3vh;
 	background-color: #222;
 	color: #ddd;
@@ -21,9 +21,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	background-color: #333;
 	padding: 0 15vw;
-	border-radius: 5%;
 	height: 100%;
 	position: absolute;
 	top: 0;
@@ -46,8 +44,12 @@ body {
 
 .links-wrapper {
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row;
 	justify-content: center;
+}
+
+.links {
+	padding-left: 2vw;
 }
 
 ul {
@@ -81,7 +83,11 @@ ul li {
 .link img {
 	height: 1.75em;
 	width: 1.75em;
-	margin: 0 0.5em;
+	margin: 0 0.5em 0 0.1em;
+}
+
+#recordsSpacer {
+	visibility: hidden !important;
 }
 
 a {
@@ -112,14 +118,15 @@ a:visited {
 }
 
 .email {
+	padding-left: 1vw;
 	text-decoration: underline;
 	display: inline-block;
-	margin-left: 0.8vw;
 }
 
 .email-wrapper {
-	background-color: #444;
-	padding: 0.8vh 1vw;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
 }
 
 .email-wrapper > a {
@@ -132,9 +139,13 @@ a:visited {
 	text-decoration: none;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (min-width: 1px) and (max-width: 319px) {
 	html {
-		font-size: 14px;
+		font-size: 12px;
+	}
+
+	body {
+		top: 4vh;
 	}
 
 	.body-wrapper {
@@ -144,12 +155,43 @@ a:visited {
 		bottom: initial;
 	}
 
+	.links-wrapper {
+		flex-flow: column nowrap;
+	}
+
+	#recordsSpacer {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+	html {
+		font-size: 13px;
+	}
+
+	body {
+		top: 0;
+	}
+
+	.body-wrapper {
+		display: block;
+		height: initial;
+		top: initial;
+		bottom: initial;
+		padding: 0;
+	}
+
 	.avatar-wrapper {
 		margin-top: 1vh;
 	}
 
 	.links-wrapper {
 		margin-bottom: 3vh;
+		flex-flow: column nowrap;
+	}
+
+	#recordsSpacer {
+		display: none;
 	}
 }
 
@@ -200,6 +242,7 @@ a:visited {
 		height: initial;
 		top: initial;
 		bottom: initial;
+		padding: initial;
 	}
 
 	.avatar-wrapper {
@@ -207,7 +250,12 @@ a:visited {
 	}
 
 	.links-wrapper {
+		flex-flow: column;
 		margin-bottom: 3vh;
+	}
+
+	#recordsSpacer {
+		display: none;
 	}
 }
 
@@ -217,16 +265,12 @@ a:visited {
 		justify-content: space-between;
 	}
 
-	.links-wrapper > .links:first-child {
-		margin-right: 3vw;
-	}
-
 	.header {
 		margin-bottom: 3vh;
 	}
 
 	.avatar {
-		height: 21vh;
+		height: 30vh;
 	}
 
 	.avatar-wrapper {
@@ -246,6 +290,10 @@ a:visited {
 	.text-wrapper > * {
 		margin: 2vh;
 	}
+
+	#recordsSpacer {
+		display: initial;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -258,6 +306,7 @@ a:visited {
 		height: initial;
 		top: initial;
 		bottom: initial;
+		padding: 0;
 	}
 
 	.avatar-wrapper {
@@ -275,16 +324,12 @@ a:visited {
 		justify-content: space-between;
 	}
 
-	.links-wrapper > .links:first-child {
-		margin-right: 3vw;
-	}
-
 	.header {
 		margin-bottom: 3vh;
 	}
 
 	.avatar {
-		height: 25vh;
+		height: 35vh;
 	}
 
 	.avatar-wrapper {

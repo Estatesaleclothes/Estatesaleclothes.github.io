@@ -1,0 +1,12 @@
+{
+	"configurations": [
+		{
+			"preLaunchTask": "serve (win)",
+			"name": "Launch Chrome",
+			"request": "launch",
+			"type": "pwa-chrome",
+			"url": "http://localhost:80",
+			"webRoot": "${workspaceFolder}"
+		}
+	]
+}
