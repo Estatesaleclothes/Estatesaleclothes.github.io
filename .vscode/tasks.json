@@ -2,14 +2,15 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "serve (win)",
+			"label": "start",
 			"type": "shell",
-			"command": "./node_modules/.bin/watch-http-server.ps1",
+			"command": "npx",
 			"args": [
+				"watch-http-server",
 				"-a",
 				"localhost",
 				"-p",
-				"80"
+				"8080"
 			],
 			"isBackground": true,
 			// This task is run before some debug tasks.

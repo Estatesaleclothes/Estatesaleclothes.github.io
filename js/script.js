@@ -38,6 +38,13 @@ window.addEventListener("DOMContentLoaded", () => {
 			getOutboundLink("https://www.discogs.com/seller/toastymallows/profile");
 			return false;
 		}
+	};
+
+	document.getElementById("shopLink").onclick = () => {
+		if (!window.google_error) {
+			getOutboundLink("https://estatesaleclothes.square.site");
+			return false;
+		}
 	}
 
 	let emailLinks = document.getElementsByClassName("email-link");
