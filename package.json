@@ -8,6 +8,9 @@
 		"type": "git",
 		"url": "git+https://github.com/Estatesaleclothes/Estatesaleclothes.github.io.git"
 	},
+	"scripts": {
+		"start": "watch-http-server -a localhost -p 8080"
+	},
 	"author": "",
 	"license": "UNLICENSED",
 	"bugs": {
