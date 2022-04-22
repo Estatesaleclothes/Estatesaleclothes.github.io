@@ -17,35 +17,6 @@
 	<meta name="msapplication-config" content="./img/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script>
-		function googleDidntLoad() {
-			window.google_error = true;
-		}
-	</script>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53912666-1" onerror="googleDidntLoad();"></script>
-	<script>
-		var getOutboundLink;
-
-		document.addEventListener("DOMContentLoaded", function (event) {
-			if (!window.google_error) {
-				window.dataLayer = window.dataLayer || [];
-				function gtag() { dataLayer.push(arguments); }
-				gtag('js', new Date());
-				gtag('config', 'UA-53912666-1');
-
-				// https://support.google.com/analytics/answer/7478520?hl=en
-				getOutboundLink = function (url) {
-					gtag('event', 'click', {
-						'event_category': 'outbound',
-						'event_label': url,
-						'transport_type': 'beacon',
-						'event_callback': function () { document.location = url; }
-					});
-				}
-			}
-		});
-	</script>
-	<script src="./js/script.js"></script>
 </head>
 
 <body>
